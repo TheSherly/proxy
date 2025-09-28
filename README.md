@@ -1,6 +1,7 @@
 # 🚀 Proxy Interno com Rate Limiting e Cache
 
 Este projeto é uma implementação de um serviço de **proxy em Python usando FastAPI** para atender ao desafio **"Proxy Interno"**.
+Alunos envolvidos: Kenyo Boechat e Arthur Borges
 
 ---
 
@@ -77,3 +78,4 @@ Você pode usar o `curl` ou qualquer cliente HTTP para testar.
 
 ```bash
 curl "[http://127.0.0.1:8000/proxy/score?cpf=12345678900](http://127.0.0.1:8000/proxy/score?cpf=12345678900)"
+```
