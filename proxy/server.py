@@ -14,7 +14,7 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(
 API_BASE_URL = "https://score.hsborges.dev/api"
 
 # *** NOVO: Lendo o Client ID da variável de ambiente ***
-# O método os.getenv() busca a variável. Se não encontrar, usa o valor padrão "julio".
+# O método os.getenv() busca a variável. Se não encontrar, usa o valor padrão "Nice".
 CLIENT_ID = os.getenv("PROXY_CLIENT_ID", "Nice")
 
 # --- Cache (Missão 3: Caching) ---
