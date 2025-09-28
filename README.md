@@ -41,3 +41,39 @@ source venv/bin/activate   # No Windows: venv\Scripts\activate
 
 # Instale as dependências
 pip install -r requirements.txt
+```
+### 3. Configuração (Variáveis de Ambiente)
+
+A aplicação é configurada através de variáveis de ambiente.
+
+- `PROXY_CLIENT_ID:` Define o `client-id` que será enviado para a API externa. Se não for definido, o valor padrão `"Nice"` será utilizado.
+
+---
+
+### 4. Executando o Servidor
+
+Para rodar o servidor, você pode definir a variável de ambiente diretamente na linha de comando.
+
+**Para usar o `client-id` padrão ("Nice"):**
+
+```bash
+uvicorn proxy.server:app --reload
+```
+
+**Para escolher um `client-id` diferente (ex: "Clain"):**
+
+```bash
+PROXY_CLIENT_ID="Clain" uvicorn proxy.server:app --reload
+```
+
+O servidor estará disponível em `http://127.0.0.1:8000`.
+
+---
+
+### Como Testar
+Você pode usar o `curl` ou qualquer cliente HTTP para testar.
+
+**Exemplo de teste:**
+
+```bash
+curl "[http://127.0.0.1:8000/proxy/score?cpf=12345678900](http://127.0.0.1:8000/proxy/score?cpf=12345678900)"
